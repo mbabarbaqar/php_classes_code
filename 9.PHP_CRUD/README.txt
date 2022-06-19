@@ -12,4 +12,8 @@ Part 2:
 Part 3:
     1. Edit screen
     2. Delete function
-    3. Search function
+    3. View item page
+
+Part 4:
+    1. Search function
+    2. Pagination
