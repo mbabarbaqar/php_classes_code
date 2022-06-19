@@ -1,6 +1,12 @@
 <?php 
 include "database.php";
 
+if(isset($_GET['delete'])){
+    $deleteID = $_GET['delete'];
+    $sqlDelete = "DELETE FROM products WHERE id = $deleteID";
+    $conn->query($sqlDelete);
+}
+
 //Slect All products
 $allProducts = array();
 $sql = "SELECT * FROM products";
@@ -28,6 +34,9 @@ $conn->close();
         <script src="./assets/plugins/bootstrap.5.1/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="row">
+            &nbsp;
+        </div>
         <div class="row">
             <div class="col-md-8" style="margin: 0 auto;">
                 <h1>PHP CRUD - Bootstrap</h1>
@@ -79,9 +88,9 @@ $conn->close();
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="edit_product.php" type="button" class="btn btn-outline-primary">Edit</a>
-                                    <a href="view_product.php" type="button" class="btn btn-outline-info">View</a>
-                                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                                    <a href="edit_product.php?id=<?php echo $allProduct["id"]; ?>" type="button" class="btn btn-outline-primary">Edit</a>
+                                    <a href="view_product.php?id=<?php echo $allProduct["id"]; ?>" type="button" class="btn btn-outline-info">View</a>
+                                    <a href="index.php?delete=<?php echo $allProduct["id"]; ?>" type="button" class="btn btn-outline-danger">Delete</a>
 
                                 </td>
                             </tr>

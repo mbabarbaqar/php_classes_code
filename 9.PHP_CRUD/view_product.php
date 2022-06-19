@@ -1,3 +1,34 @@
+<?php 
+include "database.php";
+
+$id = "";
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+}
+
+$product = array();
+if(!empty($id)){
+    $sqlSelect = "SELECT * FROM products WHERE id='$id' ";
+    
+    $result = $conn->query($sqlSelect);
+    
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        $product = $row;
+      }
+    } else {
+      echo "0 results";
+    }
+}else{
+    die("Product id is empty.");
+}
+$conn->close();
+
+//var_dump($product);exit;
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,19 +45,29 @@
                 <form>
                     <div class="mb-3">
                       <label for="name" class="form-label"><strong>Product Name</strong></label>
-                      <label for="name" class="form-label">Test</label>
+                      <label for="name" class="form-label"><?php echo $product['name'] ?></label>
                       
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label"><strong>Product Description</strong></label>
-                        <label for="name" class="form-label">Testing description</label>
+                        <label for="name" class="form-label"><?php echo $product['description'] ?></label>
                         
                       </div>
                     <div class="mb-3">
                         <label for="name" class="form-label"><strong>Is Active</strong></label>
-                        <span class="badge bg-primary">Yes</span>
+                        <?php
+                                        if($product["is_active"] == 1){
+                                    ?>
+                                        <span class="badge bg-primary">Yes</span>
+                                    <?php
+                                        }else{
+                                    ?>
+                                        <span class="badge bg-danger">No</span>
+                                    <?php
+                                        }
+                                    ?>
                     </div>
-                    <a href="index.html" type="button" class="btn btn-info">Back</a>
+                    <a href="index.php" type="button" class="btn btn-info">Back</a>
                   </form>
             </div>
         </div>
