@@ -10,10 +10,14 @@ All steps to follow
     7. Success
 
 
-    Core Steps:
-        1. Generate captcha keys
-        2. Client side implementation
-        3. Server side verification
+Core Steps:
+     1. Generate captcha keys
+     2. Client side implementation
+     3. Server side verification
+
+Keywords:
+    google reCaptcha, captcha version3,form security,security, page security, google products integration
+
 
 
     CURL REQUEST for backend responce verification:

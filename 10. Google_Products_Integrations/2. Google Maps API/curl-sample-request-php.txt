@@ -1,0 +1,16 @@
+
+    $postURL = "";
+
+    $curlx = curl_init();
+    curl_setopt($curlx, CURLOPT_URL, $postURL);
+    curl_setopt($curlx, CURLOPT_HEADER, 0);
+    curl_setopt($curlx, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curlx, CURLOPT_POST, 1);
+
+    $post_data = [];
+
+    curl_setopt($curlx, CURLOPT_POSTFIELDS, $post_data);
+    $resp = json_decode(curl_exec($curlx));
+    curl_close($curlx);
+
+    var_dump($resp);exit();

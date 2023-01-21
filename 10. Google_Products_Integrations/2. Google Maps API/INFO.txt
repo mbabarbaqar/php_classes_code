@@ -1,0 +1,45 @@
+Title:
+How to integrate google maps API in a php application.
+Google Maps API in PHP
+
+Description:
+In this lecture, we will learn how to add maps in our website or html pages.
+How to fetch client locations, address and IP addresses.
+Automatically populate address, city, state or country using users current location.
+Working with radius search using client zip code.
+Locations dropdown using search input.
+
+
+Main Topics or keywords:
+    Google Maps API
+    Google Maps
+    Geo location
+    Search by location
+    get current location of user
+    location dropdown
+    IP address
+    Fetch user address
+    Create pin on maps
+    Show markers on map
+    Dynamic markers on map
+
+
+Steps:
+    1. Create account for Google Maps API access
+    2. Provide your payment details - but you can use free trial.
+    3. Get your Google Maps API key and save it
+    4. Secure or Restrict your API key
+    5. Enable related API products
+
+Google Maps API Products:
+    1. Maps JavaScript API
+        1. Show real map on a website or html page
+        2. Show your location on the map
+        3. Show customized markers on the map
+
+       https://developers.google.com/maps/documentation/javascript?hl=en_US
+    2. Geocoding API
+        1. You can find your current location
+        2. You can find a place by address
+        3. You can find a place by latitude and longitude
+        https://developers.google.com/maps/documentation/geocoding?hl=en_US
