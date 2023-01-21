@@ -1,0 +1,33 @@
+All steps to follow
+    1. Create an HTML form
+    2. Create an action file in php to receive form data and validate recaptcha response.
+    3. Now create your reCaptcha in you google console account against your domain
+    4. Get your site-key and secret-key, do not expose your secret key.
+    5. Configure reCaptcha in your form
+    6. Verify reCaptcha response in server-side
+    7. Success
+
+
+    Core Steps:
+        1. Generate captcha keys
+        2. Client side implementation
+        3. Server side verification
+
+
+    CURL REQUEST for backend responce verification:
+
+    $postURL = "";
+
+    $curlx = curl_init();
+    curl_setopt($curlx, CURLOPT_URL, $postURL);
+    curl_setopt($curlx, CURLOPT_HEADER, 0);
+    curl_setopt($curlx, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curlx, CURLOPT_POST, 1);
+
+    $post_data = [];
+
+    curl_setopt($curlx, CURLOPT_POSTFIELDS, $post_data);
+    $resp = json_decode(curl_exec($curlx));
+    curl_close($curlx);
+
+    var_dump($resp);exit();
