@@ -1,13 +1,17 @@
 Title:
-How to integrate google maps API in a php application.
+How to integrate Google Maps API in a php application.
 Google Maps API in PHP
 
-Description:
+Description 10:
 In this lecture, we will learn how to add maps in our website or html pages.
 How to fetch client locations, address and IP addresses.
 Automatically populate address, city, state or country using users current location.
 Working with radius search using client zip code.
 Locations dropdown using search input.
+
+######################
+Description 10.2.1:
+######################
 
 
 Main Topics or keywords:
@@ -36,10 +40,109 @@ Google Maps API Products:
         1. Show real map on a website or html page
         2. Show your location on the map
         3. Show customized markers on the map
-
        https://developers.google.com/maps/documentation/javascript?hl=en_US
     2. Geocoding API
         1. You can find your current location
         2. You can find a place by address
         3. You can find a place by latitude and longitude
         https://developers.google.com/maps/documentation/geocoding?hl=en_US
+
+
+######################
+PHP Lecture 10.2.1:
+######################
+
+Titles:
+PHP Lecture 10.2.1 - Google Maps Javascript API with a marker
+PHP Lecture 10.2.1 - Google Maps Javascript API with current location marker
+
+Description:
+Show a marker in maps using current location. How to show a marker on the maps using lat and lng. How to show marker on map using current location.
+Marker on map,
+show marker,
+marker with current location,
+Google Maps in PHP,
+show maps in PHP,
+map markers,
+current location
+current location on marker,
+markers,
+Maps Javascript API,
+Google Maps
+
+Keywords:
+Marker on map, show marker, marker with current location, Google Maps in PHP, show maps in PHP, map markers, current location
+current location on marker, markers
+
+######################
+PHP Lecture 10.2.2
+######################
+Titles:
+PHP Lecture 10.2.2 - Show multiple markers on maps using Google Maps Javascript API
+PHP Lecture 10.2.2 - Google Maps Javascript API marker cluster using multiple locations
+
+Description:
+Show a multiple markers on google maps. How to show markers on the map using lat and lng collection list.
+Markers on map,
+show markers,
+Multiple markers,
+Google Maps in PHP,
+show maps in PHP,
+map markers,
+markers,
+cluster marker
+Maps Javascript API,
+Google Maps
+
+
+######################
+PHP Lecture 10.2.3
+######################
+Titles:
+PHP Lecture 10.2.3 - Google geocoding api - how to search addresses or auto-complete addresses in Urdu
+
+Description:
+In this lecture we will how to search addresses from google maps using simple search,
+How to auto-complete address fields like street address, city, state or zip code etc.
+How to show address auto-complete dropdown to fill form,
+Show address suggestions in dropdown,
+
+
+Keywords:
+geocoding api in php,
+geocoding api in urdu,
+search locations,
+auto-complete addresses,
+Address suggestions,
+Address dropdown,
+Autofill address,
+Find places from address,
+find locations
+auto complete or find zipcode,
+auto complete or find city,
+auto complete or find state
+
+
+All Steps:
+    1. Create a new or use existing project in Google Maps Platform
+    2. Enable geocoding API
+    3. Get API key or use existing API
+    4. Use your key in your API request URL
+    6. Use CURL request in PHP to fetch results or response
+    7. Display you results
+
+
+About The API:
+    This is a json/xml API,
+    Fetch multiple addresses or locations in response,
+    Take an address parameter to search locations,
+    We can restrict results using region or within a country using country code,
+    Helps to find the exact location,
+    We can use this service to autofill our address fields in contact or registration forms,
+    We can also use it to users current location, country or other components.
+    We can also use it to find the nearest locations.
+
+
+
+
+

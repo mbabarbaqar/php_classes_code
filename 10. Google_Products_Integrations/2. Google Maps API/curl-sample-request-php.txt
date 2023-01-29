@@ -6,6 +6,9 @@
     curl_setopt($curlx, CURLOPT_HEADER, 0);
     curl_setopt($curlx, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($curlx, CURLOPT_POST, 1);
+    curl_setopt($curlx, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json'
+    ));
 
     $post_data = [];
 

@@ -11,35 +11,36 @@ include "api-key.php";
     <script>
         let map;
 
-        function initMap() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+
+                    initMap(position.coords.latitude, position.coords.longitude);
+
+                },
+                () => {
+                    alert("Location not allowed.");
+                }
+            );
+        } else {
+            // Browser doesn't support Geolocation
+            alert("Location not allowed.")
+        }
+
+        function initMap(latitude, longitude) {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 31.5686912, lng: 74.3604224 },
+                center: { lat: latitude, lng: longitude },
                 zoom: 8,
             });
 
             // The marker, positioned at Uluru
-            // const marker = new google.maps.Marker({
-            //     position: { lat: 31.5686912, lng: 74.3604224 },
-            //     map: map,
-            // });
-
-            for (var i =0; i < locations.length; i++){
-                const marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
-                    map: map,
-                });
-            }
+            const marker = new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map: map,
+            });
 
         }
 
-        const locations = [
-            { lat: 31.5686912, lng: 74.3604224 },
-            { lat: 31.4237883, lng: 72.9492145 },
-            { lat: 31.7110314, lng: 73.9759677 },
-            { lat: 31.2082502, lng: 73.9098562 },
-        ];
-
-        //window.initMap = initMap;
     </script>
 
     <script type="module" src="./index.js"></script>
